@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Stephen Mwaniki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <header class="bg-gray-800 p-4">
+    <nav class="flex justify-center space-x-6">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="p-8 max-w-lg mx-auto">
+    <h1 class="text-4xl font-bold mb-6 text-center">Contact Me</h1>
+    <form id="contactForm" class="space-y-4 bg-gray-800 p-6 rounded shadow">
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-2 rounded text-black" />
+      <input type="email" id="email" placeholder="Your Email" class="w-full p-2 rounded text-black" />
+      <textarea id="message" placeholder="Your Message" class="w-full p-2 rounded text-black"></textarea>
+      <button type="submit" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded text-white w-full">Send</button>
+    </form>
+  </section>
+
+  <!-- Chatbot -->
+  <section class="fixed bottom-4 right-4">
+    <button onclick="toggleChatbot()" class="bg-purple-600 p-3 rounded-full">💬</button>
+    <div id="chatbot-window" class="hidden bg-gray-800 p-4 rounded-lg w-64 h-80 flex flex-col">
+      <div id="chatbot-messages" class="flex-1 overflow-y-auto mb-2"></div>
+      <input id="chatbot-input" type="text" class="p-2 text-black rounded" placeholder="Type a message..." />
+      <button onclick="sendMessage()" class="bg-purple-600 mt-2 p-2 rounded">Send</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 p-4 text-center mt-8">
+    <p>&copy; 2025 Stephen Mwaniki</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
